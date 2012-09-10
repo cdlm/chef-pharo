@@ -32,7 +32,7 @@
 # end
 
 remote_file "#{Chef::Config[:file_cache_path]}/#{node[:pharo][:vm_deb_package]}.deb" do
-  source "https://github.com/downloads/DamienCassou/pharo-packaging/#{node[:pharo][:vm_deb_package]}.deb"
+  source "#{node[:pharo][:vm_deb_url]}/#{node[:pharo][:vm_deb_package]}.deb"
   checksum node[:pharo][:vm_deb_checksum]
 end
 
